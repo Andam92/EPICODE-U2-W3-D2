@@ -4,9 +4,9 @@ class Person {
     this.age = age;
   }
   confrontAge(p1, p2, p3) {
-    if (p1.age > p2.age || p1.age > p3.age) {
+    if (p1.age > p2.age && p1.age > p3.age) {
       console.log(p1.name, "è più vecchio di ", p2.name, " e ", p3.name);
-    } else if (p2.age > p1.age || p2.age > p3.age) {
+    } else if (p2.age > p1.age && p2.age > p3.age) {
       console.log(p2.name, "è più vecchio di ", p1.name, " e ", p3.name);
     } else {
       console.log(p3.name, "è più vecchio di", p1.name, "e ", p2.name);
@@ -16,9 +16,9 @@ class Person {
 
 let p1 = new Person("Antonio", 31);
 let p2 = new Person("Roberta", 30);
-let p3 = new Person("Federico", 27);
+let p3 = new Person("Federico", 275);
 
-console.log(p1.confrontAge(p1, p2, p3));
+p1.confrontAge(p1, p2, p3);
 
 /* function confrontAge() {
   if (p1.age > p2.age) {
